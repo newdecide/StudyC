@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define INF 9999999
+#define INF 9999999 // 무한대를 나타냄
 
+// 데이터와 다음 노드
 typedef struct {
     int data;
     struct Node *next;    
