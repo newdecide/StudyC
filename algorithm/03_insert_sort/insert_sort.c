@@ -17,7 +17,7 @@ int swap(int *a, int *b)
 
 int main(void)
 {
-    int n, min, index; // min은 가장 작은 값을 받는다. 
+    int n; // min은 가장 작은 값을 받는다. 
     // 값 입력
     scanf("%d", &n);
     for (int i = 0; i < n; i++)
@@ -25,11 +25,11 @@ int main(void)
         scanf("%d", &a[i]);
     }
     // 이중 for문 정렬
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
         int j = i;
-        while(j <= 0 && a[j] > a[j+1]){
-            swap(&a[i], &a[index]); // 가장 작은값과 인덱스값 변경
+        while(j >= 0 && a[j] > a[j+1]){
+            swap(&a[i], &a[j + 1]); // 가장 작은값과 인덱스값 변경
             j--;
         }
     }
