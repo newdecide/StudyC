@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 #define SIZE 1000
 // 삽입정렬 
@@ -24,12 +25,12 @@ int main(void)
     {
         scanf("%d", &a[i]);
     }
-    // 이중 for문 정렬
+    // 이중 반복문 정렬
     for (int i = 0; i < n - 1; i++)
     {
         int j = i;
         while(j >= 0 && a[j] > a[j+1]){
-            swap(&a[i], &a[j + 1]); // 가장 작은값과 인덱스값 변경
+            swap(&a[j], &a[j + 1]); // 가장 작은값과 인덱스값 변경
             j--;
         }
     }
@@ -38,5 +39,6 @@ int main(void)
     {
         printf("%d ", a[i]);
     }
-    // system("pause");
+    system("pause");
+    return 0;
 }

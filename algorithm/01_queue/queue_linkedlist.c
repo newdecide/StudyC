@@ -34,6 +34,7 @@ void push(Queue *queue, int data){
 int pop(Queue *queue){
     if(queue -> count == 0){
         printf("큐 언더플로우가 발생했습니다.\n ");
+            return -INF;
     }
     Node *node = queue -> front;
     int data = node -> data;
@@ -48,7 +49,7 @@ void show(Queue *queue){
     printf("---큐의 앞---\n");
     while(cur != NULL){
         printf("%d\n", cur -> data);
-        cur=cur->next;
+        cur = cur->next;
     }
     printf("---큐의 뒤---\n");
 }
